@@ -8,7 +8,6 @@ export const getCPUStats = async (req: Request, res: Response) => {
     return res.status(400).send("Request missing: IP | timePeriod | interval");
   }
 
-  console.log({ IP, timePeriod, interval });
   try { 
       const data = await getCPUUtilization(
         IP, 
