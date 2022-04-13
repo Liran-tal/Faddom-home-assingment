@@ -1,0 +1,18 @@
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding: 2vmin;
+}
+
+.home-title {
+  margin: 2vmin 0;
+  padding: 3vmin;
+  color: rgb(75, 192, 192);
+}
+
+.home-err-msg {
+  margin: 2vmin 0;
+  color: rgb(100, 0, 0);
+}

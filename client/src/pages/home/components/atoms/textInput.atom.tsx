@@ -1,4 +1,5 @@
 import { I_TextProps } from '../../../../types/types'
+import '../../styles/searchInput.style.css';
 
 export const TextInputAtom = ({label, name, value, callback}: I_TextProps) => {
   return (

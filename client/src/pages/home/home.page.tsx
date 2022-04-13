@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { getCPUMetrics } from "../../API/aws.api";
 import { I_DataPoint, I_GraphValues } from '../../types/types';
 import GraphFC from './components/graph.fc';
-import SearchInputFC from './components/searchInput.fc'
+import SearchInputFC from './components/searchInput.fc';
+import './styles/home.style.css';
 
 const HomePage: React.FC = () => {
   const [cpuUsage, setCpuUsage] = useState<I_DataPoint[]>([])
@@ -13,7 +14,6 @@ const HomePage: React.FC = () => {
     graphValues: I_GraphValues
   ): Promise<void> => {
     event.preventDefault();
-    console.log(graphValues);
     
     try {
       const CPUMetrics: I_DataPoint[] = await getCPUMetrics(graphValues);
@@ -21,7 +21,6 @@ const HomePage: React.FC = () => {
         setErrMsg("No Data Found");
         return;
       }
-      console.log({CPUMetrics});
       
       setCpuUsage(CPUMetrics);
     } catch (error: any) {
@@ -30,12 +29,12 @@ const HomePage: React.FC = () => {
   }
 
   return (
-    <div>
-      <h2 className=''>
+    <div className='home-container'>
+      <h2 className='home-title'>
         AWS-EC2 Instance - CPU Usage
       </h2>
       <SearchInputFC fetchCPUMetrics={fetchCPUMetrics}/>
-      <div className=''>
+      <div className='home-err-msg'>
         {errMsg}
       </div>
       <GraphFC cpuUsage={cpuUsage} />

@@ -1,6 +1,6 @@
 import { SELECT_OPTIONS } from '../../../../constants/selectOptions.const';
 import { I_SelectProps, I_SelectOptions } from '../../../../types/types';
-import '../../styles/inputs.style.css';
+import '../../styles/searchInput.style.css';
 
 const SelectInputAtom = ({label, name, value, callback}: I_SelectProps) => {
   const displayOptions = () => {
