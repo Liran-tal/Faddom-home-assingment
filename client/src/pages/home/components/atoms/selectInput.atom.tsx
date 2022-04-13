@@ -12,12 +12,12 @@ const SelectInputAtom = ({label, name, value, callback}: I_SelectProps) => {
   }
 
   return (
-    <div className='graph-info-inputs-container'>
+    <div className='search-input-inputs-container'>
       <label>
         {label}:
       </label>
       <select
-        className='graph-info-input-element'
+        className='search-input-input-element'
         name={name}
         value={value}
         onChange={(e) => callback(e)}

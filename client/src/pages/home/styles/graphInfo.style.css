@@ -1,11 +1,11 @@
-.graph-info-form {
+.search-input-form {
   margin: 2vmin;
   width: 50vmin;
   font-size: 1.2rem;
 }
 
-.graph-info-inputs-container,
-.graph-info-submit-btn-container {
+.search-input-inputs-container,
+.search-input-submit-btn-container {
   width: 100%;
   margin: 0.5rem;
   display: flex;
@@ -13,13 +13,13 @@
   align-content: center;
 }
 
-.graph-info-input-element {
+.search-input-input-element {
   width: 50%;
   text-align: center;
 }
 
 
-.graph-info-submit-btn {
+.search-input-submit-btn {
   margin: auto;
   padding: 0.2em 0.3em;
 }

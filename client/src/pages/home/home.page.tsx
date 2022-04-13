@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { getCPUMetrics } from "../../API/aws.api";
 import { I_DataPoint, I_GraphValues } from '../../types/types';
 import GraphFC from './components/graph.fc';
-import GraphInfoFC from './components/graphInfo.fc'
+import SearchInputFC from './components/searchInput.fc'
 
 const HomePage: React.FC = () => {
   const [cpuUsage, setCpuUsage] = useState<I_DataPoint[]>([])
@@ -31,7 +31,10 @@ const HomePage: React.FC = () => {
 
   return (
     <div>
-      <GraphInfoFC fetchCPUMetrics={fetchCPUMetrics}/>
+      <h2 className=''>
+        AWS-EC2 Instance - CPU Usage
+      </h2>
+      <SearchInputFC fetchCPUMetrics={fetchCPUMetrics}/>
       <div className=''>
         {errMsg}
       </div>
