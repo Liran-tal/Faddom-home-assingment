@@ -38,7 +38,7 @@ const getDatePortion = (date: Date): string => {
   let day = date.getDate().toString();
     
   let month = (monthNum + 1).toString();
-  let year = yearNum.toString().substr(-2);
+  let year = yearNum.toString().substring(-2);
   
   if (day.length === 1) {
     day = "0" + day;
